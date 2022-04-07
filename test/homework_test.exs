@@ -47,12 +47,4 @@ defmodule HomeworkTest do
     element = find_element(:id, "result")
     assert visible_text(element) == "You entered: TAB"
   end
-
-  test "Type the TAB key and get result" do
-    url = "https://reqres.in/api/users?page=2"
-
-    response = HTTPoison.get!(url)
-    assert response.status_code == 200
-  end
-
 end
